@@ -13,7 +13,6 @@ export default function Navbar() {
           {/* <NavLink className={({ isActive }) => (isActive ? 'active' : 'not')} to="/chattinglist">
             <AiOutlineComment className="msg-icon" />
           </NavLink> */}
-          {/* 임시용 fath login */}
           <NavLink className={({ isActive }) => (isActive ? 'active' : 'not')} to="/login">
             <AiOutlineComment className="msg-icon" />
           </NavLink>
