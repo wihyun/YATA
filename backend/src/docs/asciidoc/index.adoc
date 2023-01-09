@@ -1,0 +1,37 @@
+= YATA! 애플리케이션
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Table of Contents
+:source-highlighter: prettify
+
+api 뒤 _csrf 는 무시하시면 됩니다!
+
+유형찬
+주현주
+김채은
+
+v1.0.0, 2022.12.20
+
+***
+== AuthController
+
+=== 로그인
+
+== MemberController
+=== 회원 가입
+.http-request
+include::{snippets}/member-create/http-request.adoc[]
+.request-body
+include::{snippets}/member-create/request-body.adoc[]
+.request-fields
+include::{snippets}/member-create/request-fields.adoc[]
+.http-response
+include::{snippets}/member-create/http-response.adoc[]
+.response-headers
+include::{snippets}/member-create/response-headers.adoc[]
+
+
+
+
+
