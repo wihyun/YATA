@@ -20,7 +20,7 @@ const Container = styled.div`
 const ScreenBlock = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: white;
   overflow: scroll;
   @media only screen and (min-width: 470px) {
