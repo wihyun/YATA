@@ -5,7 +5,7 @@ import { FaCarSide } from 'react-icons/fa';
 import { RiSteeringLine } from 'react-icons/ri';
 import { TbHeartHandshake } from 'react-icons/tb';
 
-export default function Navbar() {
+export default function Navbar({ children }) {
   return (
     <>
       <Container>
@@ -27,16 +27,17 @@ export default function Navbar() {
             <p>마이페이지</p>
           </NavLink>
         </NavContainer>
+        {children}
       </Container>
     </>
   );
 }
 
 const Container = styled.div`
+  position: relative;
+
   div {
     background-color: #fff;
-    position: absolute;
-    bottom: 0;
     box-shadow: 0 -5px 10px -8px lightgrey;
   }
 `;

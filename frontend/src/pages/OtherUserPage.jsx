@@ -14,7 +14,6 @@ export default function OtherUserPage() {
   return (
     <>
       <Container>
-        <NavBar />
         <MyPageContainer>
           <ProfileContainer>
             <Profile>
@@ -72,13 +71,14 @@ export default function OtherUserPage() {
           </ListContainer>
         </MyPageContainer>
       </Container>
+      <NavBar />
     </>
   );
 }
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+  flex: 1;
+  overflow: scroll;
 
   button {
     margin-bottom: 2rem;
@@ -86,8 +86,6 @@ const Container = styled.div`
 `;
 
 const MyPageContainer = styled.div`
-  width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

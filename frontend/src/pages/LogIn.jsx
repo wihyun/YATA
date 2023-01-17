@@ -79,7 +79,9 @@ export default function Login() {
 }
 
 const Container = styled.div`
-  height: calc(100vh - 60px);
+  flex: 1;
+  overflow: scroll;
+
   display: flex;
   flex-direction: column;
   align-items: center;

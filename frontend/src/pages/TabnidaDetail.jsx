@@ -10,7 +10,6 @@ import { VscAccount } from 'react-icons/vsc';
 export default function TabnidaDetail() {
   return (
     <>
-      <NavBar />
       <Container>
         <Header title={'탑니다'}></Header>
         <ProfileContainer>
@@ -54,13 +53,14 @@ export default function TabnidaDetail() {
 
         <InviteButton>초대하기</InviteButton>
       </Container>
+      <NavBar />
     </>
   );
 }
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;

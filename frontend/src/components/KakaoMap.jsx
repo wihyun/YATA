@@ -8,6 +8,11 @@ const { kakao } = window;
 // 출발지인지 도착지인지 구분
 // 출발지를 어떻게 정하는지에 대한 구분 ( 드래그, 직접 입력 후 선택)
 // onCenterChanged에 setIsDeparture넣기
+// 도착, 경유지 아이콘 추가
+// 출발, 도착, 경유지 마커 전역 상태 x, y로 변경
+// 출발지 도착지 입력 후 isFilled false ( 맵 보이게 인풋 창 내리기 )
+// 출발지와 도착지가 한눈에 보이게 맵 위치, 크기 조정
+// setIsDeparture, setIsDestination 상태관리 야무지게 하기
 
 // - 디테일 페이지 -
 // addressName, placeName, x, y 상태 얻어오기, 적용
@@ -43,14 +48,17 @@ const KakaoMap = props => {
       // GeoLocation을 이용해서 접속 위치를 얻어옵니다
       navigator.geolocation.getCurrentPosition(
         position => {
-          setState(prev => ({
-            ...prev,
-            center: {
-              lat: position.coords.latitude, // 위도
-              lng: position.coords.longitude, // 경도
-            },
-            isLoading: false,
-          }));
+          setState(
+            prev => ({
+              ...prev,
+              center: {
+                lat: position.coords.latitude, // 위도
+                lng: position.coords.longitude, // 경도
+              },
+              isLoading: false,
+            }),
+            getAddr(state.center.lat, state.center.lng),
+          );
         },
         err => {
           setState(prev => ({

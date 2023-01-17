@@ -5,9 +5,8 @@ import Header from '../components/Header';
 export default function RatingList() {
   return (
     <>
-      <Navbar></Navbar>
+      <Header title={'매너 평가'}></Header>
       <Container>
-        <Header title={'매너 평가'}></Header>
         <GoodContainer>
           <Title>
             <div>👍 좋았던 점</div>
@@ -40,13 +39,14 @@ export default function RatingList() {
         </BadContainer>
         <BadContainer></BadContainer>
       </Container>
+      <Navbar />
     </>
   );
 }
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+  flex: 1;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;

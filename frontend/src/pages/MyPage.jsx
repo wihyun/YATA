@@ -11,7 +11,6 @@ export default function MyPage() {
   return (
     <>
       <Container>
-        <NavBar />
         <MyPageContainer>
           <ProfileContainer>
             <Profile>
@@ -103,13 +102,15 @@ export default function MyPage() {
           </ListContainer>
         </MyPageContainer>
       </Container>
+      <NavBar />
     </>
   );
 }
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  flex: 1;
+  overflow: scroll;
 `;
 
 const MyPageContainer = styled.div`
@@ -118,7 +119,6 @@ const MyPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: scroll;
 `;
 const ProfileContainer = styled.div`
   width: 80%;

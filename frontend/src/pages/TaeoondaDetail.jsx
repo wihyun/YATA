@@ -11,7 +11,6 @@ import { AiOutlineCar } from 'react-icons/ai';
 export default function TabnidaDetail() {
   return (
     <>
-      <NavBar />
       <Container>
         <Header title={'태웁니다'}></Header>
         <ProfileContainer>
@@ -59,13 +58,14 @@ export default function TabnidaDetail() {
 
         <RequestButton>신청하기</RequestButton>
       </Container>
+      <NavBar />
     </>
   );
 }
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
